@@ -1,0 +1,11 @@
+#include "main.h"
+/**
+* _putchar - code
+* @c: character
+*
+* Return: 0
+*/
+int _putchar()
+{
+	return(write(1, &c, 1));
+}
