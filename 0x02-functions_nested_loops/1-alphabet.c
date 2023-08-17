@@ -1,17 +1,15 @@
 #include "main.h"
-
 /**
-* main - Entry Command
-* Description - Print lowercase alphabet
-*
-* Return: Nothing
+* print_alphabet - prints the english alphabet from a-z.
+* Return: Nothing.
 */
-void print_alphabet(void){
-	char r;
+void print_alphabet(void)
+{
+	char c;
 
-	for (r = 'a'; r <= 'z'; r++)
+	for (c = 'a'; c <= 'z'; c++)
 	{
-		_putchar(r);
+		_putchar(c);
 	}
 	_putchar('\n');
 }
