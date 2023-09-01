@@ -1,18 +1,18 @@
 #include "main.h"
 /**
- * _puts - Escribir un texto
- *
- * @str: This is my entry
- *
+ * _strcmp - a function that compares two strings
+ * @s1: input one
+ * @s2: input two
+ * Return: Always 0 (Success)
  */
-
-void _puts(char *str)
+int _strcmp(char *s1, char *s2)
 {
-	int a;
+	int i;
 
-	for (a = 0; str[a] != '\0'; a++)
+	for (i = 0; s1[i] != '\0' && s2[i] != '\0'; i++)
 	{
-		_putchar(str[a]);
+		if (s1[i] != s2[i])
+			return (s1[i] - s2[i]);
 	}
-	_putchar('\n');
+	return (0);
 }
