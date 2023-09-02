@@ -9,22 +9,22 @@
 * Return: 0
 */
 
-int num1;
-int num2;
-int product;
-
 int main(int argc, char *argv[])
 {
+	int a;
+	int b;
+	int c;
+
 	if (argc != 3)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	num1 = atoi(argv[1]);
-	num2 = atoi(argv[2]);
-	product = num1 * num2;
+	a = atoi(argv[1]);
+	b = atoi(argv[2]);
+	c = a * b;
 
-	printf("%d\n", product);
+	printf("%d\n", c);
 	(void) argc;
 	(void) argv;
 	return (0);
