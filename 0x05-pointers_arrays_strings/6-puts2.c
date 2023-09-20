@@ -1,29 +1,24 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
- * puts2 - prints every other character of a string,
- * starting with the first character,
- * followed by a new line.
- * @str: input string.
- * Return: void.
+ * puts2 - print even element
+ * @str: the string
+ * Return: null
  */
 void puts2(char *str)
 {
-	int count = 0;
+	int i, len = 0;
 
-	while (count >= 0)
+	i = 0;
+	while (str[i])
 	{
-		if (str[count] != '\0')
-		{
-			if (count % 2 == 0)
-			{
-				_putchar(str[count]);
-			}
-			count++;
-		} else
-		{
-			count = -1;
-			_putchar('\n');
-		}
+		len++;
+		i++;
 	}
+
+	for (i = 0; i < len; i = i + 2)
+	{
+		putchar(str[i]);
+	}
+	putchar('\n');
 }
