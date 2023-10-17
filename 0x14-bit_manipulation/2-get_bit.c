@@ -1,25 +1,20 @@
 #include "main.h"
 
 /**
- * get_bit - function entry
- * @n: int whose bit to get
- * @index: position of bit
- * Desc: a function that returns the
- *	value of a bit at a given index
- * Return: the value of the bit at given
- *	index or -1 if an error occured
+ * get_bit - returns the value of a bit at a given index
+ * @num: number which contains the bit
+ * @index: index at which bit must be found
+ *
+ * Return: bit (Success) or -1 (error)
  */
-int get_bit(unsigned long int n, unsigned int index)
+int get_bit(unsigned long int num, unsigned int index)
 {
-	unsigned int bit, x = 0;
+	int bit;
 
-	while (n != 0)
-	{
-		bit = n & 1;
-		if (x == index)
-			return (bit);
-		n = n >> 1;
-		x++;
-	}
-	return (0);
+	if (index > (sizeof(unsigned long int) * 8 - 1))
+		return (-1);
+
+	bit = (num >> index) & 1;
+
+	return (bit);
 }
